@@ -1,0 +1,42 @@
+{
+	"name": "haxeui",
+	"displayName": "HaxeUI",
+	"version": "0.0.1",
+	"publisher": "lublak",
+	"engines": {
+		"vscode": "^1.54.0"
+	},
+	"license": "MIT",
+	"description": "HaxeUI preview",
+	"categories": [
+		"Other"
+	],
+	"icon": "logo.png",
+	"keywords": [
+		"haxe",
+		"haxeui",
+		"preview"
+	],
+	"bugs": "https://github.com/",
+	"homepage": "https://github.com/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/"
+	},
+	"main": "build/plugin.js",
+	"activationEvents": [
+		"onCommand:haxeui.preview"
+	],
+	"scripts": {
+		"vscode:prepublish": "haxe build.hxml"
+	},
+	"contributes": {
+		"commands": [
+			{
+				"title": "Open preview",
+				"command": "haxeui.preview",
+				"category": "HaxeUI"
+			}
+		]
+	}
+}

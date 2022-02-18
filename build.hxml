@@ -1,0 +1,20 @@
+-cp src
+
+--each
+
+-lib haxeui-core
+-lib haxeui-html5
+-lib hscript
+-js build/preview.js
+--main Preview
+
+--next
+
+--dce full
+-D analyzer-optimize
+-D js-es=6
+
+-lib hxnodejs
+-lib vscode
+-js build/plugin.js
+Main
