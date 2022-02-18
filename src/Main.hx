@@ -27,6 +27,10 @@ class Main {
 							enableScripts: true,
 						}
 					);
+
+					currentPanel.onDidDispose(event -> {
+						currentPanel = null;
+					});
 		
 					currentPanel.webview.html = getWebViewContent();
 					currentPanel.webview.onDidReceiveMessage(message -> {
@@ -46,7 +50,7 @@ class Main {
 		}));
 		
 		Vscode.workspace.onDidSaveTextDocument(document -> {
-			if(document == currentDoc) {
+			if(document.fileName == currentDoc.fileName) {
 				postMessage({
 					xml: document.getText()
 				});

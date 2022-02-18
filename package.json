@@ -28,7 +28,8 @@
 		"onCommand:haxeui.preview"
 	],
 	"scripts": {
-		"vscode:prepublish": "haxe build.hxml"
+		"vscode:prepublish": "haxe build.hxml",
+		"package": "vsce package"
 	},
 	"contributes": {
 		"commands": [
@@ -38,5 +39,8 @@
 				"category": "HaxeUI"
 			}
 		]
+	},
+	"devDependencies": {
+		"vsce": "^2.6.7"
 	}
 }
